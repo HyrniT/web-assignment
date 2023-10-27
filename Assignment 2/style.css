@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-bg-light: #cccccc;
+    --color-text-lightmode: black;
+    --color-text-darkmode: white;
+    --color-header-darkmode: #212429;
+}
+
+body {
+    background-color: #cccccc;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.carousel-inner {
+    overflow: unset;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.navbar-brand:hover {
+    cursor: pointer;
+}
+
+.loader {
+    width: 150px;
+    height: 150px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #000000;
+    animation: spin 2s linear infinite;
+}
+
+#loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 300px 0;
+}
+
+.carousel-big-item-title {
+    opacity: 0.3;
+    font-size: 14px;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-big-item-title span:first-child {
+    font-size: 20px;
+}
+
+#carousel-big>#carouselExampleIndicators>.carousel-inner>.carousel-item>img {
+    height: 500px;
+    object-fit: contain;
+}
+
+.carousel-item * {
+    pointer-events: none;
+}
+
+.carousel-item {
+    position: relative;
+    cursor: pointer;
+}
+
+#carouselExampleIndicators,
+#carouselExampleIndicators-most-popular,
+#carouselExampleIndicators-top-rating {
+    overflow: hidden;
+}
+
+.carousel-small-img {
+    width: 100%;
+    height: 300px;
+}
+
+.carousel-small-img:hover {
+    transform: scale(1.2);
+}
+
+.carousel-small-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#carousel-small .carousel-control-prev,
+#carousel-small .carousel-control-next {
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.list-movies-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.list-movies-item * {
+    pointer-events: none;
+}
+
+.list-movies-item-img {
+    height: 500px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.list-movies-item-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.movie-page-img {
+    height: 600px;
+    object-fit: contain;
+}
+
+.movie-page-item * {
+    font-size: 20px;
+}
+
+.movie-page-item span:first-child {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.movie-page-actor>div>div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.movie-page-actor-item * {
+    pointer-events: none;
+}
+
+.movie-page-actor img {
+    height: 100px;
+    width: 100px;
+}
+
+.reviews-item {
+    border-bottom: 1px solid black;
+}
+
+.reviews-item:last-child {
+    border-bottom: none;
+}
+
+.reviews-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews-user>div:first-child {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.reviews-content>div:first-child {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.reviews-content>div:last-child {
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
+.actor-movies {
+    padding: 20px;
+    width: 100%;
+}
+
+.actor-movies>div:first-child {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.actor-movies-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.actor-movies>div>div {
+    cursor: pointer;
+}
+
+.actor-movies-item>img {
+    height: 300px;
+    object-fit: contain;
+}
+
+.actor-movies-item>div>div {
+    text-align: center;
+}
