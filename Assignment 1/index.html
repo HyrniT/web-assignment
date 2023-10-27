@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20120077</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>Bài tập 1 - 20120077</div>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+                <li><a href="#">Menu 5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr class="line-header">
+    <div class="row">
+        <div class="left-column">
+            <aside class="card-container">
+                <div class="card">
+                    <details>
+                        <summary>
+                            <span>NEWS 01</span>
+                            <span style="left: 96%;">&#8597;</span>
+                        </summary>
+                        <div>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sunt fugiat dolore veritatis ipsam
+                            quisquam,
+                            iste dignissimos expedita excepturi, error voluptatem esse molestiae rerum reiciendis illum,
+                            placeat neque
+                            consectetur saepe?
+                        </div>
+                    </details>
+                </div>
+                <div class="card">
+                    <details>
+                        <summary>
+                            <span>NEWS 02</span>
+                            <span style="left: 96%;">&#8597;</span>
+                        </summary>
+                        <div>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sunt fugiat dolore veritatis ipsam
+                            quisquam,
+                            iste dignissimos expedita excepturi, error voluptatem esse molestiae rerum reiciendis illum,
+                            placeat neque
+                            consectetur saepe?
+                        </div>
+                    </details>
+                </div>
+                <div class="card">
+                    <details>
+                        <summary>
+                            <span>NEWS 03</span>
+                            <span style="left: 96%;">&#8597;</span>
+                        </summary>
+                        <div>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sunt fugiat dolore veritatis ipsam
+                            quisquam,
+                            iste dignissimos expedita excepturi, error voluptatem esse molestiae rerum reiciendis illum,
+                            placeat neque
+                            consectetur saepe?
+                        </div>
+                    </details>
+                </div>
+                <div class="card">
+                    <details>
+                        <summary>
+                            <span>NEWS 04</span>
+                            <span style="left: 96%;">&#8597;</span>
+                        </summary>
+                        <div>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sunt fugiat dolore veritatis ipsam
+                            quisquam,
+                            iste dignissimos expedita excepturi, error voluptatem esse molestiae rerum reiciendis illum,
+                            placeat neque
+                            consectetur saepe?
+                        </div>
+                    </details>
+                </div>
+            </aside>
+        </div>
+        <div class="right-column">
+            <main>
+                <h1>ĐĂNG KÝ ĐƠN HÀNG</h1>
+                <hr class="line-main">
+                <form class="form-container" id="form">
+                    <label for="fullname">Họ và tên:</label>
+                    <input type="text" name="fullname" id="fullname" required>
+                    <div></div>
+                    <div class="massage-error" id="fullname-error"></div>
+                    <label for="address">Địa chỉ:</label>
+                    <input type="text" name="address" id="address" required>
+                    <div></div>
+                    <div class="massage-error" id="address-error"></div>
+                    <label for="phone">Điện thoại:</label>
+                    <input type="tel" name="phone" id="phone" required>
+                    <div></div>
+                    <div class="massage-error" id="phone-error"></div>
+                    <label for="gender">Giới tính:</label>
+                    <div>
+                        <input type="radio" name="gender" id="male" value="Nam" required>
+                        <label for="male">Nam</label>
+                        <input type="radio" name="gender" id="female" value="Nữ" required>
+                        <label for="female">Nữ</label>
+                    </div>
+                    <div></div>
+                    <div class="massage-error" id="gender-error"></div>
+                    <label for="date">Ngày giao hàng:</label>
+                    <input type="date" name="date" id="date" required>
+                    <div></div>
+                    <div class="massage-error" id="date-error"></div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" required>
+                    <div></div>
+                    <div class="massage-error" id="email-error"></div>
+                </form>
+                <div class="manage-container">
+                    <h2 id="product-title">Danh sách sản phẩm</h2>
+                    <div class="manage-button-container">
+                        <div class="manage-button" id="add" onclick="addProduct()">></div>
+                        <div class="manage-button" id="add-all" onclick="addAllProducts()">>></div>
+                        <div class="manage-button" id="remove" onclick="removeProduct()"><</div>
+                        <div class="manage-button" id="remove-all" onclick="removeAllProducts()"><<</div>
+                    </div>
+                    <h2 id="ordered-title">Sản phẩm đã chọn</h2>
+                    <div class="container" id="product-container">
+                        <div class="product mobile" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Mobile"></div>
+                            <div>iPhone 14 Pro Max 256GB</div>
+                            <div style="color: red;">$1349</div>
+                        </div>
+                        <div class="product mobile" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Mobile"></div>
+                            <div>Samsung S23 Ultra 256GB</div>
+                            <div style="color: red;">$1089</div>
+                        </div>
+                        <div class="product tablet" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Tablet"></div>
+                            <div>iPad Pro M1 11" 128GB</div>
+                            <div style="color: red;">$999</div>
+                        </div>
+                        <div class="product laptop" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Laptop"></div>
+                            <div>ASUS ZenBook UX505</div>
+                            <div style="color: red;">$929</div>
+                        </div>
+                        <div class="product laptop" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Laptop"></div>
+                            <div>LG Gram 2023 17"</div>
+                            <div style="color: red;">$1049</div>
+                        </div>
+                        <div class="product laptop" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Laptop"></div>
+                            <div>DELL XPS 13 9315 (2022)</div>
+                            <div style="color: red;">$1199</div>
+                        </div>
+                        <div class="product tablet" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Tablet"></div>
+                            <div>iPad Pro M2 11" 256GB</div>
+                            <div style="color: red;">$1399</div>
+                        </div>
+                        <div class="product mobile" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Mobile"></div>
+                            <div>Samsung Galaxy Z Flip5 512GB</div>
+                            <div style="color: red;">$1189</div>
+                        </div>
+                        <div class="product mobile" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Mobile"></div>
+                            <div>iPhone 14 Pro Max 512GB</div>
+                            <div style="color: red;">$1489</div>
+                        </div>
+                        <div class="product laptop" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Laptop"></div>
+                            <div>Macbook Pro 16" 2023"</div>
+                            <div style="color: red;">$2300</div>
+                        </div>
+                        <div class="product laptop" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Laptop"></div>
+                            <div>LG Gram 2021 14"</div>
+                            <div style="color: red;">$729</div>
+                        </div>
+                        <div class="product tablet" onclick="toggleSelection(this)" draggable="true">
+                            <div class="image-container"><img alt="Tablet"></div>
+                            <div>iPad Pro M2 12.9" 256GB</div>
+                            <div style="color: red;">$1399</div>
+                        </div>
+                    </div>
+                    <div class="container" id="ordered-container">
+                        
+                    </div>
+                </div>
+                <div class="form-button-container">
+                    <span id="sign-up-button" class="form-button" onclick="register()">Đăng ký</span>
+                    <span id="remove-all-button" class="form-button" onclick="resetAll()">Xoá hết</span>
+                </div>
+                <hr class="line-main" style="margin-top: 3px;">
+                <div class="table-container">
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                <th>Họ và tên</th>
+                                <th>Giới tính</th>
+                                <th>Địa chỉ</th>
+                                <th>Ngày giao</th>
+                                <th>Sản phẩm</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <tr>
+                                <td>Nguyễn Thị A</td>
+                                <td>Nữ</td>
+                                <td>TP. Hồ Chí Minh</td>
+                                <td>07/10/2023</td>
+                                <td>LG Gram 2023 17"; iPad ProM1 11" 128GB</td>
+                            </tr>
+                            <tr>
+                                <td>Trần Thị C</td>
+                                <td>Nữ</td>
+                                <td>TP. Cần Thơ</td>
+                                <td>01/11/2023</td>
+                                <td>iPhone 14 Pro Max 256GB</td>
+                            </tr>
+                            <tr>
+                                <td>Lê Văn E</td>
+                                <td>Nam</td>
+                                <td>TP. Hà Nội</td>
+                                <td>14/12/2023</td>
+                                <td>ASUS ZenBook UX505; Samsung S23 Ultra 256GB; iPad Pro M1 11" 128GB</td>
+                            </tr>
+                            <tr>
+                                <td>Phạm Thị D</td>
+                                <td>Nữ</td>
+                                <td>TP. Hồ Chí Minh</td>
+                                <td>25/10/2023</td>
+                                <td>DELL XPS 13 9315 (2022)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+    <hr class="line-header" style="margin-top: 10px;">
+    <footer>
+        <span>Copyright &copy; HyrniT</span>
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="#">Menu 1</a></li>
+                <li>|</li>
+                <li><a href="#">Menu 2</a></li>
+                <li>|</li>
+                <li><a href="#">Menu 3</a></li>
+                <li>|</li>
+                <li><a href="#">Menu 4</a></li>
+                <li>|</li>
+                <li><a href="#">Menu 5</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
