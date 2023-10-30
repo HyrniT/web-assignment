@@ -31,7 +31,7 @@ export default {
         
     },
     template: `
-    <div id="carousel-big" :class="{ 'bg-light': !isDarkMode, 'bg-dark': isDarkMode }">
+    <div id="carousel-big" :class="{ 'bg-dark': isDarkMode }">
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
